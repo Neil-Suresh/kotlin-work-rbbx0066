@@ -10,7 +10,9 @@ import kotlin.io.path.writeText
 fun main() {
     val filePath = Path("test.txt")// Add your code here
     filePath.writeText("check check 1 2" )
-    filPath.writeText("this should be a new line")
+    filePath.appendText("this should be a new line")
+    val v = filePath.readText()
+    println(v)
 }
 
 

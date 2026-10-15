@@ -2,15 +2,24 @@
 
 fun main() {
     // Add your code here
-    val h = """
-        PIZZA MENU
+    print( """
+PIZZA MENU
 
-        (a) Margherita
-        (b) Quattro Stagioni
-        (c) Seafood
-        (d) Hawaiian
+(a) Margherita
+(b) Quattro Stagioni
+(c) Seafood
+(d) Hawaiian
 
-        Choose your pizza (a-d):
-    """
-    println(h)
+Choose your pizza (a-d): """)
+
+    val x = readln().lowercase()
+
+    if(x.length == 1 && x[0] in "a".."d"  ){
+    println("yea works")
+} else{
+        println("Invalid")
+    }
 }
+
+
+

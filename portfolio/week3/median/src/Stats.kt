@@ -5,13 +5,13 @@ import kotlin.collections.sorted
 
 // Task 7.7.1: statistics functions
 fun median(data: List<Float>): Float {
-    if (data.isEmpty() return 0f
+    require(data.isNotEmpty())
 
     val sort = data.sorted()
     val len = data.size
     val n = len/2
 
-    return if (n % 2==0 ){
+    return if (len % 2 !=0 ){
         sort[n]
     }
     else {
